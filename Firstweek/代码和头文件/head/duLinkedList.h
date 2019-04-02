@@ -1,6 +1,6 @@
 /***************************************************************************************
  *	File Name				:	duLinkedList.h
- *	CopyRight				:	2019 QG Studio  
+ *	CopyRight				:	2019 QG Studio
  *	SYSTEM					:   win10
  *	Create Data				:	2019.3.20
  *	Author/Corportation		:	ed1son
@@ -30,18 +30,18 @@
 **************************************************************/
 
 // define element type
-typedef int ElemType; 
+typedef int ElemType;
 
 // define struct of linked list
-typedef struct DuLNode { 
-	ElemType data; 
-  	struct DuLNode *prior,  *next; 
+typedef struct DuLNode {
+	ElemType data;
+  	struct DuLNode *prior,  *next;
 } DuLNode, *DuLinkedList;
 
 // define status
-typedef enum Status { 
+typedef enum Status {
 	ERROR,
-	SUCCESS, 
+	SUCCESS,
 } Status;
 
 
@@ -93,18 +93,20 @@ Status InsertAfterList_DuL(DuLNode *p, DuLNode *q);
  *  @notice      : None
  */
 Status DeleteList_DuL(DuLNode *p, ElemType *e);
- 
+
 /**
  *  @name        : void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e))
  *	@description : traverse the linked list and call the funtion visit
- *	@param		 : L(the head node), visit 
+ *	@param		 : L(the head node), visit
  *	@return		 : Status
  *  @notice      : None
  */
 void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e));
 
- 
+Status inputList_DuL(DuLinkedList *L);
+
+Status OutputList_DuL(DuLinkedList *L);
  /**************************************************************
 *	End-Multi-Include-Prevent Section
 **************************************************************/
-#endif 
+#endif
